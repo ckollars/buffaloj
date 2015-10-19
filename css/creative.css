@@ -6,6 +6,13 @@ body {
 body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
   background: url(../img/logo.jpg) no-repeat center center;
+  background-size: 250%;
+}
+@media (min-width: 768px) {
+  body {
+    background-size: inherit;
+    background-position: center center;
+  }
 }
 hr {
   border-color: #f05f40;
@@ -152,7 +159,7 @@ header {
 header .header-content {
   position: relative;
   text-align: center;
-  padding: 100px 15px 100px;
+  padding: 60px 15px 100px;
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
@@ -162,12 +169,17 @@ header .header-content .header-content-inner h1 {
   margin-bottom: 0;
 }
 header .header-content .header-content-inner hr {
-  margin: 30px auto;
+  margin: 0 auto 240px auto;
+}
+@media (min-width: 768px) {
+  header .header-content .header-content-inner hr {
+    margin-bottom: 310px;
+  }
 }
 header .header-content .header-content-inner p {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 50px;
 }
 @media (min-width: 768px) {
@@ -175,20 +187,18 @@ header .header-content .header-content-inner p {
     min-height: 100%;
   }
   header .header-content {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 0 50px;
+    padding: 5% 50px 0 50px;
   }
   header .header-content .header-content-inner {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
+  header .header-content .header-content-inner h1 {
+    font-size: 70px;
+  }
   header .header-content .header-content-inner p {
-    font-size: 18px;
+    font-size: 27px;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -375,6 +385,14 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-xl {
   padding: 15px 30px;
+  margin-bottom: 10px;
+  display: block;
+}
+@media (min-width: 768px) {
+  .btn-xl {
+    margin: 0;
+    display: inline;
+  }
 }
 ::-moz-selection {
   color: white;
