@@ -28,12 +28,12 @@
     });
 
     // Fit Text Plugin for Main Header
-    $("h1").fitText(
-        1.2, {
-            minFontSize: '35px',
-            maxFontSize: '65px'
-        }
-    );
+    // $("h1").fitText(
+    //     1.2, {
+    //         minFontSize: '35px',
+    //         maxFontSize: '65px'
+    //     }
+    // );
 
     // Offset for Main Navigation
     $('#mainNav').affix({
@@ -43,6 +43,23 @@
     })
 
     // Initialize WOW.js Scrolling Animations
-    new WOW().init();
+    // new WOW().init();
+
+    var jayFeed = new Instafeed({
+      get: 'user',
+        userId: 266550284,
+        accessToken: '266550284.456bf7f.9e8b3d0a92aa4283baa4437cba216746',
+        limit: '36',
+        // links: 'false',
+        resolution: 'standard_resolution',
+        target: 'gallery',
+        template: '<div class="tattoo col-lg-3 col-sm-4"><img src="{{image}}"></div>',
+
+      filter: function(image) {
+        return image.tags.indexOf('tenthsanctum') >= 0;
+      }
+    });
+
+    // jayFeed.run();
 
 })(jQuery); // End of use strict
